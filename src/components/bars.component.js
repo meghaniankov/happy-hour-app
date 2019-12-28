@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Collapsible from 'react-collapsible';
 
-const Bar = props => (
+import{
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardText
+} from "reactstrap";
+
+function Bar (props){
+  return(
+    <>
   <tr>
     <td>{props.bar.name}</td>
     <td>{props.bar.neighborhood}</td>
-    <td>{props.bar.deal}</td>
-  </tr>
-)
+    <td>{props.bar.deal_type}</td>
+  </tr >
+    <Collapsible trigger="Start here" contentContainerTagName="tr">
+    <p>{props.bar.deal_desc}</p>
+    </Collapsible>
+
+  </>
+  )
+}
 
 export default class BarsList extends Component {
   constructor(props) {
@@ -28,26 +45,35 @@ export default class BarsList extends Component {
 
   barsList() {
     return this.state.bars.map(currentbar => {
-      return <Bar bar={currentbar} key={currentbar._id}/>;
+      return <>
+              <Bar bar={currentbar} key={currentbar._id}/> 
+          
+        
+            </>;
     })
   }
 
   render() {
     return (
       <div>
-        <h3>Super Awesome Bars</h3>
-        <table className="table">
-          <thead className="thead-light">
-            <tr>
-              <th>Name</th>
-              <th>Neighborhood</th>
-              <th>Deal</th>
-            </tr>
-          </thead>
-          <tbody>
-            { this.barsList() }
-          </tbody>
-        </table>
+        <Card>
+          <CardBody>
+            <CardText>
+              <table className="table">
+                <thead className="thead-light">
+                  <tr>
+                    <th>Name</th>
+                    <th>Neighborhood</th>
+                    <th>Deal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  { this.barsList() }                
+                </tbody>
+            </table>
+            </CardText>
+          </CardBody>
+        </Card>
       </div>
     )
   }
