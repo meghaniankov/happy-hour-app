@@ -8,7 +8,7 @@ import "./components/UI_Addon/src/assets/css/bootstrap.min.css";
 import "./components/UI_Addon/src/assets/css/now-ui-kit.css";
 // import "assets/css/now-ui-kit.min.css";
 // import "assets/css/now-ui-kit.css.map";
-import "./components/UI_Addon/src/assets/demo/demo.css";
+//import "./components/UI_Addon/src/assets/demo/demo.css";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

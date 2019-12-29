@@ -1,4 +1,6 @@
 import React from 'react';
+import BrittImage from './britt.jpg';
+import FilterBar from './filter-bar.component';
 
 import{
     Card,
@@ -11,17 +13,23 @@ import{
  
 function AppHeader ()  {
     return(
+      <>
       <div>
         <Card>
           <CardBody>
             <CardText>
-              <div>
-                  <h1>Filter/Search stuff</h1>
-              </div>
+              <div class="Header-Image-Logo"><img src={BrittImage} /> </div>
+              <div class="Header-App-Title">Brittany's Happy Hours</div>
             </CardText>
           </CardBody>
-        </Card>
+          <div>
+        <FilterBar />
       </div>
+        </Card>
+        
+      </div>
+      
+      </>
     )
   }
 
