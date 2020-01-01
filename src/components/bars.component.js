@@ -12,6 +12,8 @@ import{
   CardText
 } from "reactstrap";
 
+
+
 function Bar (props){
   return(
     <>
