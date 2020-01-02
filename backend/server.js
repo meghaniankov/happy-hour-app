@@ -19,8 +19,10 @@ connection.once('open', () => {
 })
 
 const barsRouter = require('./routes/bars');
+const neighborhoodsRouter = require('./routes/neighborhoods');
 
 app.use('/bars', barsRouter);
+app.use('/neighborhoods', neighborhoodsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

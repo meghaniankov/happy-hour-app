@@ -58,7 +58,7 @@
 
 .Filter-Bar {
   background-color: lightgray;
-  height: 30px;
+  height: 50px;
   width:100%;
   display: inline-flex;
 }
@@ -297,4 +297,29 @@
   height: 50%;
   display: block;
   font-size: 20px;
+}
+
+.Filter-Neighborhood-Name {
+  width: 80%;
+  display: block;
+  float: left;
+  text-align: left;
+  padding: 10px;
+}
+
+.Filter-Checkbox {
+  width: 20%;
+  display: block;
+  float: right;
+  padding: 10px;
+}
+
+.Filter-Menu-Main {
+  width: 100%;
+  height: 100%;
+}
+
+.Filter-Menu-Neighborhood {
+  height: 200px;
+  overflow: scroll;
 }

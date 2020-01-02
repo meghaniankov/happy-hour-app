@@ -1,6 +1,8 @@
 import React from 'react';
 import BrittImage from './britt.jpg';
 import FilterBar from './filter-bar.component';
+import FilterCollapse from './filter-collapse.component';
+
 
 import{
     Card,
@@ -23,7 +25,7 @@ function AppHeader ()  {
             </CardText>
           </CardBody>
           <div>
-        <FilterBar />
+        <FilterCollapse />
       </div>
         </Card>
         
